@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/supplier?characterEncoding=utf-8&serverTimezone=GMT
+    username: root
+    password: 1024638031
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+
+
+Mybatis:
+  mapper-locations: classpath*:com/ssm/market/dao/mapper/*.xml
+  mybatis.type-aliases-package: com.ssm.market.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
